@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Poppins&family=Rubik:ital,wght@0,300;1,300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ms Madi', cursive;
+    /* border: 1px solid red; */
+}
+body{
+    min-height: 100vh;
+    background-color: #fff;
+}
+.naveed{
+    background: rgb(255, 91, 91);
+}
+.navigation{
+    background: #4d5bf9;
+    position: fixed;
+    left: 20px;
+    top:20px;
+    bottom:20px;
+    width: 250px;                       /*width reduced after toggle button making */
+    overflow-x: hidden;     /*because text coming out when not active*/
+    border-radius: 10px;
+    border-left: 15px solid #4d5bf9;  /*for pushing the content to right*/
+    box-sizing: initial;
+    transition:width 0.5s;      /*transition only on width*/
+}
+.navigation.active{
+    width: 50px;                /*now width is 300px*/
+}
+.navigation ul{
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 5px;
+}
+.navigation ul li{
+    /* background: blue; */
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;       /*set after adding active class*/ 
+    border-bottom-left-radius: 20px;    /*set after adding active class*/
+}
+.navigation ul li.active{
+    background: #fff;
+}
+
+.navigation ul li a{
+    /* background: black; */
+    position: relative;
+    display: flex;          /*expand to full block*/
+    width: 100%;              /*now set percent*/
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li.active a{
+    color: #000;
+}
+
+.navigation ul li a .icon{
+    /* background: yellow; */
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 20px;
+    line-height:90px;
+    text-align: center;
+    margin:20px 10px 0 -10px ;      /*my own for positioning of icon*/
+}
+.navigation ul li a .title{
+  position: relative;  
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  white-space: normal;     /*dont know*/
+}
+
+.toggle{
+    height: 50px;
+    width: 50px;
+    background: #4d5bf9;
+    position: fixed;
+    right: 20px;
+    top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;             /*for centring cross icon*/
+    justify-content: center;
+    align-items: center;
+}
+.toggle.active{
+    background: #ff0000;
+}
+.toggle span{
+    position: absolute;   /*dont know*/
+    color: #fff;
+    font-size: 20px;
+    font-family: monospace;    /*faltoo*/
+    /* display: none; */
+}
+.toggle span.open ,
+.toggle.active span.close{
+    display: block;
+}
+.toggle span.close,
+.toggle.active span.open{
+    display: none;
+}
+
+
+.navigation ul li b:nth-child(1){
+    background: #fff;
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    display: none;
+}
+.navigation ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #4d5bf9;
+    border-bottom-right-radius: 20px;
+}
+.navigation ul li b:nth-child(2){
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    height: 20px;
+    width: 100%;
+    display: none;
+}
+.navigation ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #4d5bf9;
+    border-top-right-radius: 20px;
+}
+.navigation ul li.active b:nth-child(2),
+.navigation ul li.active b:nth-child(1){
+    display: block;
+}
+
+/* we can use this also */
+
+/* .list.active::before{
+    position: absolute;
+    content: "before";
+    z-index: 10px;
+    height: 20px;
+    width: 100%;
+    background:#fff;
+    top:-20px;
+    border-bottom-right-radius: 20px;
+}
+
+.list.active::after{
+    position: absolute;
+    content: "after";
+    z-index: 10px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    top: 60px;
+    border-top-right-radius: 20px;
+} */
