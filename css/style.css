@@ -188,7 +188,8 @@ body{
 } */
 
 .inspiration{
-    /* background: red; */
+    background: var(--sidecolor);
+    color: var(--color);
     font-size: 10px;
     display: flex;
     justify-content: center;
