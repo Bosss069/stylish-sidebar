@@ -1,5 +1,4 @@
 // document.write('<h6>javaScript file is connected succesfully</h6>');
-
 let menuToggle = document.querySelector('.toggle');
 let navigation = document.querySelector('.navigation');//added later
 menuToggle.onclick = function () {
@@ -20,4 +19,4 @@ for (let i = 0; i < list.length; i++) {
 }
 list[2].className = 'naveed';
 
-
+var bcs ='red';

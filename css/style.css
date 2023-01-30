@@ -8,13 +8,16 @@
 }
 body{
     min-height: 100vh;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--color);
 }
 .naveed{
-    background: rgb(255, 91, 91);
+    background:var(--sidecolor);
 }
 .navigation{
-    background: #4d5bf9;
+    /* background: #4d5bf9; */
+    background: var(--sidecolor);
+    background: bc;
     position: fixed;
     left: 20px;
     top:20px;
@@ -22,7 +25,8 @@ body{
     width: 250px;                       /*width reduced after toggle button making */
     overflow-x: hidden;     /*because text coming out when not active*/
     border-radius: 10px;
-    border-left: 15px solid #4d5bf9;  /*for pushing the content to right*/
+    /* border-left: 5px solid #4d5bf9;  for pushing the content to right */
+    border-left: 5px solid var(--sidecolor); /* for pushing the content to right*/
     box-sizing: initial;
     transition:width 0.5s;      /*transition only on width*/
 }
@@ -47,7 +51,8 @@ body{
     border-bottom-left-radius: 20px;    /*set after adding active class*/
 }
 .navigation ul li.active{
-    background: #fff;
+    /* background: #fff; */
+    background: var(--color);
 }
 
 .navigation ul li a{
@@ -56,7 +61,8 @@ body{
     display: flex;          /*expand to full block*/
     width: 100%;              /*now set percent*/
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--color);
 }
 .navigation ul li.active a{
     color: #000;
@@ -83,7 +89,8 @@ body{
 .toggle{
     height: 50px;
     width: 50px;
-    background: #4d5bf9;
+    background: #709592;
+    /* background:var(--color); */
     position: fixed;
     right: 20px;
     top: 30px;
@@ -94,27 +101,30 @@ body{
     align-items: center;
 }
 .toggle.active{
-    background: #ff0000;
+    background: var(--sidecolor);
 }
-.toggle span{
+.toggle svg{
+    max-width: 35px;
     position: absolute;   /*dont know*/
-    color: #fff;
+    /* color: #fff; */
+    color: var(--color);
     font-size: 20px;
     font-family: monospace;    /*faltoo*/
     /* display: none; */
 }
-.toggle span.open ,
-.toggle.active span.close{
-    display: block;
-}
-.toggle span.close,
-.toggle.active span.open{
+.toggle svg.open ,
+.toggle.active svg.close{
     display: none;
+}
+.toggle svg.close,
+.toggle.active svg.open{
+    display: block;
 }
 
 
 .navigation ul li b:nth-child(1){
-    background: #fff;
+    /* background: #fff; */
+    background: var(--color);
     position: absolute;
     top: -20px;
     height: 20px;
@@ -126,11 +136,13 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #4d5bf9;
+    /* background: #4d5bf9; */
+    background: var(--sidecolor);
     border-bottom-right-radius: 20px;
 }
 .navigation ul li b:nth-child(2){
-    background: #fff;
+    /* background: #fff; */
+    background: var(--color);
     position: absolute;
     top: 60px;
     height: 20px;
@@ -142,7 +154,8 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #4d5bf9;
+    /* background: #4d5bf9; */
+    background: var(--sidecolor);
     border-top-right-radius: 20px;
 }
 .navigation ul li.active b:nth-child(2),
@@ -173,3 +186,10 @@ body{
     top: 60px;
     border-top-right-radius: 20px;
 } */
+
+.inspiration{
+    /* background: red; */
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}

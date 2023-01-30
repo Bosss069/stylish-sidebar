@@ -1,15 +1,15 @@
 <html>
 
 <head>
-    <title>Responsive Nav bar</title>
+    <title>Stylish Sidebar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="--color: #fff; --sidecolor: #000;">
     <div class="navigation">
         <ul>
-            <li class="list">
+            <li class="list active">
                 <b></b>
                 <b></b>
                 <a href="#">
@@ -54,7 +54,7 @@
                 <b></b>
                 <a href="#">
                     <!-- <span class="icon">></span> -->
-                    <svg class="icon" viewBox="0 0 512 512"><path d="M160 164s1.44-33 33.54-59.46C212.6 88.83 235.49 84.28 256 84c18.73-.23 35.47 2.94 45.48 7.82C318.59 100.2 352 120.6 352 164c0 45.67-29.18 66.37-62.35 89.18S248 298.36 248 324" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40"/><circle cx="248" cy="399.99" r="32"/></svg>
+                    <svg class="icon" viewBox="0 0 512 512"><path d="M160 164s1.44-33 33.54-59.46C212.6 88.83 235.49 84.28 256 84c18.73-.23 35.47 2.94 45.48 7.82C318.59 100.2 352 120.6 352 164c0 45.67-29.18 66.37-62.35 89.18S248 298.36 248 324" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40"/><circle cx="248" cy="399.99" r="32" stroke="currentColor"/></svg>
                     <span class="title">HELP</span>
                 </a>
             </li>
@@ -62,9 +62,12 @@
         </ul>
     </div>
     <div class="toggle">
-        <span class="open">O</span>
-        <span class="close">X</span>
+        <!-- <span class="open">O</span> -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="open" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M96 256h320M96 176h320M96 336h320"/></svg>
+        <!-- <span class="close">X</span> -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="close" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
     </div>
+    <div class="inspiration">LEARNED AND INSPIRED BY ONLINE TUTORIALS YOUTUBE CHANNEL</div>
 
     <script src="myscript.js"></script>
 
